@@ -1093,6 +1093,17 @@ pfUI:RegisterModule("gui", function ()
     end
   end)
 
+  -- >> Addon buttons
+  pfUI.gui.tabs.panel.tabs.addonbuttons = pfUI.gui.tabs.panel.tabs:CreateTabChild(T["Addon Buttons"], true)
+  pfUI.gui.tabs.panel.tabs.addonbuttons:SetScript("OnShow", function()
+    if not this.setup then
+      CreateConfig(update["addonbuttons"], this, T["Number Of Buttons Per Row/Column"], C.addonbuttons, "rowsize")
+      CreateConfig(update["addonbuttons"], this, T["Button Spacing"], C.addonbuttons, "spacing")
+      CreateConfig(update["addonbuttons"], this, T["Hide When Entering Combat"], C.addonbuttons, "hideincombat", "checkbox")
+      this.setup = true
+    end
+  end)
+
 
   -- [[ Tooltip ]]
   pfUI.gui.tabs.tooltip = pfUI.gui.tabs:CreateTabChild(T["Tooltip"], nil, nil, nil, true)

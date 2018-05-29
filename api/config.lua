@@ -620,6 +620,11 @@ function pfUI:LoadConfig()
   pfUI:UpdateConfig("panel",      "xp",          "showalways",       "0")
   pfUI:UpdateConfig("panel",      "bag",         "ignorespecial",    "1")
 
+  pfUI:UpdateConfig("addonbuttons", nil,         "rowsize",          "6")
+  pfUI:UpdateConfig("addonbuttons", nil,         "spacing",          "2")
+  pfUI:UpdateConfig("addonbuttons", nil,         "updateinterval",   "3")
+  pfUI:UpdateConfig("addonbuttons", nil,         "hideincombat",     "1")
+
   pfUI:UpdateConfig("castbar",    "player",      "hide_blizz",       "1")
   pfUI:UpdateConfig("castbar",    "player",      "hide_pfui",        "0")
   pfUI:UpdateConfig("castbar",    "target",      "hide_pfui",        "0")
